@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'cad-prod',
+    loadChildren: () => import('./cad-prod/cad-prod.module').then( m => m.CadProdPageModule)
+  },
 ];
 
 @NgModule({
