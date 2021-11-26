@@ -3,14 +3,15 @@
     <ion-buttons mode="ios" slot="start">
       <ion-back-button color="dark"></ion-back-button>
     </ion-buttons>
-    <ion-title>Produto</ion-title>
+    <ion-title style="font-weight: bold;">Produto</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
- <ion-title class="ion-text-center">Cadastro</ion-title>
+  <div class="titulo"><ion-title class="ion-text-center">Cadastro</ion-title></div>
 
- <form [formGroup]="formCadastro">
+
+ <form class="forms" [formGroup]="formCadastro">
 
   <ion-item>
     <ion-label position="floating">Nome do Produto:</ion-label>
@@ -42,10 +43,14 @@
     <ion-input formControlName="preco" placeholder="Ex: R$5.90"></ion-input>
   </ion-item>
 
-  <div class="butSave">
-    <ion-button expand="full" (click)="salvarCadastro()">SALVAR</ion-button>
-  </div>
+    <ion-button color="success" expand="full" (click)="salvarCadastro()">SALVAR</ion-button>
 
  </form>
 
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-footer>

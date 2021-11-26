@@ -17,5 +17,8 @@ export class HomePage {
     this.listaProdutos = await this.storageService.getAll();
   }
 
+  ionViewDidEnter() {
+    this.buscarProdutos();
+  }
 
 }
